@@ -4,6 +4,16 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * Servicios Web para logica del Negocio
+ * de la SolicitudService
+ * 
+ * @author Diana Ciro
+ * @author Milena Cardenas
+ * @author Jorge Bojaca  
+ * @version 1.0
+ */
+/*Parsear de manera automatica los objetos de esta clase a formato JSON*/
 @XmlRootElement
 public class SolicitudDTOws {
 	private int id;//PK

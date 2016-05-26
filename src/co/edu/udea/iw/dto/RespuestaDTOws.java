@@ -2,6 +2,15 @@ package co.edu.udea.iw.dto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * DTO para el servicio Web EncuestaWS
+ * 
+ * @author Diana Ciro
+ * @author Milena Cardenas
+ * @author Jorge Bojaca  
+ * @version 1.0
+ */
+/*Parsear de manera automatica los objetos de esta clase a formato JSON*/
 @XmlRootElement
 public class RespuestaDTOws {
 	

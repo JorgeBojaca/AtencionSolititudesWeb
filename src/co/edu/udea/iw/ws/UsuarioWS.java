@@ -20,6 +20,15 @@ import co.edu.udea.iw.exception.ExceptionDao;
 import co.edu.udea.iw.exception.IWServiceException;
 import co.edu.udea.iw.logicaNegocio.UsuarioService;
 
+/**
+ * Servicios Web para logica del Negocio
+ * de UsuarioService
+ * 
+ * @author Diana Ciro
+ * @author Milena Cardenas
+ * @author Jorge Bojaca  
+ * @version 1.0
+ */
 @Component
 @Path("Usuario")
 public class UsuarioWS {

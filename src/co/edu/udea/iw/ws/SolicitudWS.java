@@ -22,13 +22,29 @@ import co.edu.udea.iw.exception.IWServiceException;
 import co.edu.udea.iw.logicaNegocio.SolicitudService;
 import javassist.tools.rmi.RemoteException;
 
+/**
+ * Servicios Web para logica del Negocio
+ * de SolicitudService.
+ * 
+ * @author Diana Ciro
+ * @author Milena Cardenas
+ * @author Jorge Bojaca  
+ * @version 1.0
+ */
 @Component
 @Path("Solicitud")
 public class SolicitudWS {
 
+	/*Se realiza una inyeccion de dependencia, para crear una instancia de EncuestaService */
 	@Autowired
 	SolicitudService solicitudService;
-
+	
+	/**
+	 * Servicio para Obtener la lista de solicitures de un usuario enviado como parametro.
+	 * @param user identificador del usuario.
+	 * @return Lista de solicitudes.
+	 * @throws RemoteException llama las excepciones propias.
+	 */
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	public List<SolicitudDTOws> obtener(@QueryParam("user") String user) throws RemoteException {
@@ -65,6 +81,15 @@ public class SolicitudWS {
 		}
 	}
 
+	/**
+	 * Servicio para guardar una solicitud.
+	 * @param descripcion descripcion de la solicitud
+	 * @param tiposolicitud identificador del tipo de solicitud.
+	 * @param cliente identificador del cliente.
+	 * @param producto nombre del producto.
+	 * @param idSucursal identificador de la sucursa.
+	 * @return mensaje de confirmaciÃ³n.
+	 */
 	@Produces(MediaType.TEXT_PLAIN)
 	@POST
 	@Path("Guardar")
@@ -81,7 +106,14 @@ public class SolicitudWS {
 			throw new RemoteException(e);
 		}
 	}
-
+	
+	/**
+	 * Servicio para asinar un responsable para responder la solicitud hecha por un cliente.
+	 * @param idSolicitud identificador de la solicitud.
+	 * @param usuarioResponsable user del responsable al que se le asignara la solicitud.
+	 * @param usuarioGerente user del gerente (unico que puede asignar responsables).
+	 * @return mensaje de confirmacion.
+	 */
 	@Produces(MediaType.TEXT_PLAIN)
 	@PUT
 	@Path("AsignarResponsable")
@@ -89,14 +121,21 @@ public class SolicitudWS {
 			@QueryParam("responsable") String usuarioResponsable, @QueryParam("gerente") String usuarioGerente) {
 		try {
 			solicitudService.asignarResponsable(idSolicitud, usuarioResponsable, usuarioGerente);
-			return "Se asignó responsable correctamente";
+			return "Se asigno responsable correctamente";
 		} catch (ExceptionDao e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {
 			throw new RemoteException(e);
 		}
 	}
-
+	
+	/**
+	 * Servicio para responder una solicitud.
+	 * @param idSolicitud identificador de la solicitud.
+	 * @param respuestaSolicitud campo de texto con la respuesta a la solicitud.
+	 * @param usuarioResponsable identificador del usuario responsable de responder la solicitud.
+	 * @return
+	 */
 	@Produces(MediaType.TEXT_PLAIN)
 	@PUT
 	@Path("ResponderSolicitud")
@@ -114,6 +153,11 @@ public class SolicitudWS {
 
 	}
 
+	/**
+	 * Servicio para obtener una solicitud en formato de JSON 
+	 * @param idSolicitud identificador de la solicitud
+	 * @return Solicitud con los atributos definidos en SolicitudDTOws
+	 */
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("ObtenerSolicitud")
@@ -146,6 +190,10 @@ public class SolicitudWS {
 		}
 	}
 
+	/**
+	 * Servicio para obtner una lista de Solicitudes en formato JSON
+	 * @return lista de solicitudes
+	 */
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	@Path("SolicitudesAtrasadas")
@@ -183,10 +231,14 @@ public class SolicitudWS {
 		}
 	}
 
+	/**
+	 * Servicio para filtrar la informacion de una solicitud enviada como parametro
+	 * @param tipoSolicitud identificador de la solicitud
+	 * @return retorna una lista de solicitudes
+	 */
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	@Path("Filtrar") // NO ESTA FUNCIONANDO puede ser porque se utiliza el Query
-						// y no se hace Join
+	@Path("Filtrar") 
 	public List<SolicitudDTOws> fitrarSolicitudes(@QueryParam("tipo") int tipoSolicitud) {
 		List<Solicitud> solicitudes = null;
 		List<SolicitudDTOws> solicitudesRet = null;
