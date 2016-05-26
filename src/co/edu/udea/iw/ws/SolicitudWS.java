@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -65,9 +66,7 @@ public class SolicitudWS {
 	}
 
 	@Produces(MediaType.TEXT_PLAIN)
-	// @POST
-	@GET // Se debe realizar con post pero se realizó con GET pra realizar las
-			// pruebas mas facil
+	@POST
 	@Path("Guardar")
 	public String guardar(@QueryParam("descripcion") String descripcion, @QueryParam("tiposolicitud") int tiposolicitud,
 			@QueryParam("cliente") String cliente, @QueryParam("producto") String producto,
@@ -84,8 +83,7 @@ public class SolicitudWS {
 	}
 
 	@Produces(MediaType.TEXT_PLAIN)
-	// @PUT //Debe ser con PUT ya que es una actualización
-	@GET
+	@PUT
 	@Path("AsignarResponsable")
 	public String asignarResponsable(@QueryParam("idSolicitud") int idSolicitud,
 			@QueryParam("responsable") String usuarioResponsable, @QueryParam("gerente") String usuarioGerente) {
@@ -100,8 +98,7 @@ public class SolicitudWS {
 	}
 
 	@Produces(MediaType.TEXT_PLAIN)
-	@PUT // Por ser una actualizacion
-	// @GET
+	@PUT
 	@Path("ResponderSolicitud")
 	public String responderSolicitud(@QueryParam("idSolicitud") int idSolicitud,
 			@QueryParam("respuesta") String respuestaSolicitud, @QueryParam("responsable") String usuarioResponsable) {
