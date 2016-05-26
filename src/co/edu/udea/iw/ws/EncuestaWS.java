@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -79,6 +80,23 @@ public class EncuestaWS {
 		} catch (ExceptionDao e) {
 			throw new RemoteException(e);
 		}
+	}
+	
+	@Produces(MediaType.TEXT_HTML)
+	@POST
+	@Path("ResponderPregunta")
+	public String responderPregunta(@QueryParam("idSolicitud")int idSolicitud,
+			@QueryParam("idPregunta")int idPregunta,@QueryParam("respuesta")int respuesta){
+		
+		try {
+			encuestaService.guardarRespuesta(idSolicitud, idPregunta, respuesta);
+			return "Gracias por responder!";
+		} catch (ExceptionDao e) {
+			throw new RemoteException(e);
+		} catch (IWServiceException e) {
+			throw new RemoteException(e);
+		}
+		
 	}
 
 }
