@@ -4,33 +4,29 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ProyectoIW"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/antlr-2.7.6.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/commons-collections-3.1.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/commons-logging.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/hibernate3.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/javassist-3.12.0.GA.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/jta-1.1.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/slf4j-log4j12-1.7.2.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-aop-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-beans-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-context-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-core-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-expression-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-jdbc-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-orm-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-test-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-tx-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/export/auxprog/caterine.ciro/Escritorio/Proyecto/ProyectoIW/lib/spring-web-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/slf4j-log4j12-1.7.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-aop-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-beans-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-core-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-expression-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-jdbc-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-orm-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-test-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-tx-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/IngWeb/JerseyIW/SpringEjemplo/Lib/spring-web-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

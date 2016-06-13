@@ -1,0 +1,45 @@
+	<div class="container">
+
+		<h1>Responder Solicitud</h1>
+		<form role="form">
+			<div class="form-group">
+				<label for="solicitud">Solicitud:</label>
+				 <select
+					class="form-control" id="solicitud"
+					required="required" ng-model="respuesta.idSol">
+					<option ng-repeat="Solicitud in solicitudes" value={{Solicitud.id}} title={{Solicitud.descripcion}}>{{Solicitud.id}}</option>
+					</select>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" ng-change="mostrarSolicitudes()" ng-model="check"/>Ver Solicitudes</label>
+			</div>
+			<div class="form-group">
+
+				<label for="respuesta">Respuesta:</label> <textarea
+					class="form-control" id="respuesta" placeholder="Escriba aquí la respuesta..."
+					required="required" ng-model=respuesta.descripcion></textarea>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary" ng-click="guardarRespuesta()">Responder</button>
+			</div>
+		</form>
+	</div>
+	<div class="container" ng-show=mostrar>
+	<table class="table table-hover" >
+		<tr>
+			<th>Id</th>
+			<th>Descripcion</th>
+			<th>Cliente</th>
+			<th>Respuesta</th>
+			<th>Encargado</th>
+		</tr>
+		<tr ng-repeat="Solicitud in solicitudes">
+			
+			<td>{{Solicitud.id}}</td>
+			<td>{{Solicitud.descripcion}}</td>
+			<td>{{Solicitud.cliente}}</td>
+			<td>{{Solicitud.respuestaSolicitud}}</td>
+			<td>{{Solicitud.responsable}}</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,19 @@
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+<!-- <link href="../resources/style/signin.css" rel="stylesheet"> -->
+
+<div class="container" ng-controller="contLogin" align="center">
+	  <h1><strong>Bienvenido</strong></h1>
+      <form class="form-signin">
+        <h3 class="form-signin-heading">Inicio de Sesion</h3>
+        <label for="inputEmail" class="sr-only">Nombre Usuario </label>
+        <input type="text" id="nombreUsuario" class="form-control" ng-model ="usuario" placeholder="Usuario" required autofocus>
+        <label for="inputPassword" class="sr-only" >Contraseña</label>
+        <input type="password" id="inputPassword" ng-model ="pwd" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="autenticar()">Iniciar Sesion</button>
+      </form>
+
+</div>

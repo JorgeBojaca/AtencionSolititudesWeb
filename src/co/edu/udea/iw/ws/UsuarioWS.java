@@ -112,10 +112,7 @@ public class UsuarioWS {
 	public String autenticar(@QueryParam("user") String user, @QueryParam("password") String password){
 		
 		try {
-			usuarioService.autenticarUsuario(user, password);
-				
-				return "Autenticacion correcta";
-				
+			return usuarioService.autenticarUsuario(user, password);		
 		} catch (ExceptionDao e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {

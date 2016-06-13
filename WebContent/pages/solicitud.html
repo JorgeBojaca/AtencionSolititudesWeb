@@ -1,0 +1,49 @@
+<div class="container">
+
+		<h1>Solicitud!</h1>
+		<form role="form" ng-submit="guardar()">
+			<div class="form-group">
+				<label for="descripcion">Descripción:</label>
+				<textarea class="form-control" id="descripcion" rows="4"
+					required="required" placeholder="Escriba aquí su solicitud..." ng-model="solicitud.descripcion"></textarea>
+			</div>
+			<div class="form-group">
+
+				<label for="tipo">Tipo de Solicitud:</label> <select
+					class="form-control" id="tipo" required="required" title="Seleccione el tipo de solicitud" ng-model="solicitud.tipo">
+					<option></option>
+					<option value="1">Peticion</option>
+					<option value="2">Queja</option>
+					<option value="3">Reclamo</option>
+					<option value="4">Sugerencia</option>
+				</select>
+				<tt>Seleccionado = {{solicitud.tipo}}</tt>
+			</div>
+<!-- 			<div class="form-group"> No se pone ya q es user por cookie-->
+<!-- 				<label for="cliente">Cliente:</label> <input type="text"  -->
+<!-- 					class="form-control" id=cliente placeholder="Entre identificación" -->
+<!-- 					required="required" ng-model="cliente"> -->
+<!-- 			</div> -->
+			<div class="form-group">
+				<label for="producto">Producto:</label> <input type="text"
+					class="form-control" id=producto placeholder="Entre producto" ng-model="solicitud.producto">
+			</div>
+			
+			<div class="form-group">
+
+				<label for="sucursal">Sucursal:</label>
+				<select ng-model="solicitud.sucursal"
+					class="form-control" id="sucursal" palceholder="Seleccion la sucursal" title="Seleccione la sucursal que causó esta solicitud">
+					<option></option>
+					<option>Sucursal 1</option>
+					<option>Sucursal 2</option>
+					<option>Sucursal 3</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+			</div>
+
+		</form>
+	</div>
