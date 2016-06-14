@@ -112,7 +112,11 @@ public class UsuarioWS {
 	public String autenticar(@QueryParam("user") String user, @QueryParam("password") String password){
 		
 		try {
-			return usuarioService.autenticarUsuario(user, password);		
+			return usuarioService.autenticarUsuario(user, password);	
+			
+			//con el objetoo session guardo el usuarrio.			
+			//sesion.setAttribute("Usuario", user);
+			
 		} catch (ExceptionDao e) {
 			throw new RemoteException(e);
 		} catch (IWServiceException e) {

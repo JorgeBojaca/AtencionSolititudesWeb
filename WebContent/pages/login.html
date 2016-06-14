@@ -7,13 +7,13 @@
 
 <div class="container" ng-controller="contLogin" align="center">
 	  <h1><strong>Bienvenido</strong></h1>
-      <form class="form-signin">
+      <form class="form-signin" ng-submit="autenticar()">
         <h3 class="form-signin-heading">Inicio de Sesion</h3>
         <label for="inputEmail" class="sr-only">Nombre Usuario </label>
-        <input type="text" id="nombreUsuario" class="form-control" ng-model ="usuario" placeholder="Usuario" required autofocus>
+        <input type="text" id="nombreUsuario" class="form-control" ng-model ="usuario" placeholder="Usuario" required="required" autofocus>
         <label for="inputPassword" class="sr-only" >Contraseña</label>
-        <input type="password" id="inputPassword" ng-model ="pwd" class="form-control" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="autenticar()">Iniciar Sesion</button>
+        <input type="password" id="inputPassword" ng-model ="pwd" class="form-control" placeholder="Password" required="required">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesion</button>
       </form>
 
 </div>

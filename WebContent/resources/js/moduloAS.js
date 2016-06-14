@@ -3,8 +3,8 @@ var app = angular.module('ModAS', [ 'ngRoute' ]);
 var texto;
 
 
-/*
- * Configura las vistas del aplicativo
+/**
+ * Configuracion de las vistas del aplicativo
  */
 app.config([ '$routeProvider', function($routeProvider) {
 
@@ -23,8 +23,9 @@ app.config([ '$routeProvider', function($routeProvider) {
 	})
 } ]);
 
-/*
- * Controlador para manejar las solicitudes, se le inyecta el servicio Solicitudes
+/**
+ * Controlador para manejar las solicitudes, 
+ * Se le inyecta el servicio Solicitudes
  */
 app.controller('contSolicitud',function(Solicitudes,$scope,$location){
 	
@@ -49,8 +50,9 @@ app.controller('contSolicitud',function(Solicitudes,$scope,$location){
 	
 })
 
-/*
- * Controlador para manejar el formulario de autenticacion
+/**
+ * Controlador para manejar el formulario de autenticacion,
+ * se le inyecta el servicio Autenticacion
  */
 app.controller('contLogin', function(Autenticacion, $scope, $location) {
 	$scope.usuario = '';
@@ -66,7 +68,7 @@ app.controller('contLogin', function(Autenticacion, $scope, $location) {
 						if ((data == 'gerente') || (data == 'administrador')) {
 							alert(data);
 							$location.url('/responderSol');
-						}else if (data == cliente) {
+						}else if (data == 'cliente') {
 							$location.url('/solicitud');
 						}else{
 							alert(data);
@@ -80,8 +82,9 @@ app.controller('contLogin', function(Autenticacion, $scope, $location) {
 	}
 });
 
-/*
- * Controlador para manejar el formulario de Respuesta a solicitudes
+/**
+ * Controlador para manejar el formulario de Respuesta a solicitudes,
+ * se le inyecta el servicio Solicitudes
  */
 app.controller('contResponder', function(Solicitudes, $scope, $location) {
 	$scope.mostrar=false;
@@ -89,6 +92,7 @@ app.controller('contResponder', function(Solicitudes, $scope, $location) {
 			idSol:'',
 			descripcion:''
 	}
+	
 	Solicitudes.obtenerTodas().success(function(data) {		
 		$scope.solicitudes = data.solicitudDTOws;
 	});
@@ -102,6 +106,15 @@ app.controller('contResponder', function(Solicitudes, $scope, $location) {
 	$scope.guardarRespuesta=function(){
 		Solicitudes.responderSolicitud($scope.respuesta).success(function(data){
 			alert(data);
+			
+			//Recargar la tabla solicitudes para mostrar en la pagina
+			Solicitudes.obtenerTodas().success(function(data) {		
+				$scope.solicitudes = data.solicitudDTOws;
+			});
+			$scope.respuesta={
+					idSol:'',
+					descripcion:''
+			}
 		})
 		
 	}
